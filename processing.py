@@ -195,6 +195,7 @@ def draw_number_frames(boxes, img):
 
 
 def process_image(im):
+    print("Processing")
     if isinstance(im, str):
         im = Image.open(im)
     elif isinstance(im, np.ndarray):
@@ -222,5 +223,4 @@ def process_image(im):
     table[table == 0] = 9
     table = table.astype(int)
     print(table)
-
     return table
