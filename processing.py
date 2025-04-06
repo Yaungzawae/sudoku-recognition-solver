@@ -221,6 +221,6 @@ def process_image(im):
     table = draw_number_frames(boxes, grayscale(refined_img))
 
     table[table == 0] = 9
+    table[table == -1] = 0
     table = table.astype(int)
-    print(table)
     return table
